@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fibonacci Spiral</title>
+    <style>
+        #main {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-family: apple;
+            font-weight: 600;
+            background-image: url(extras/bg.jpg);
+            animation-name: fadeIn;
+            animation-duration: 1s; /* duration of the effect */
+            animation-timing-function: ease-in; /* speed-time curve of the animation */
+            animation-fill-mode: forwards; /* retains the final state of the animation, i.e, opacity: 1; */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @font-face {
+            font-family: apple;
+            src: url(extras/apple_garamond/AppleGaramond-LightItalic.ttf);
+        }
+
+        @font-face {
+            font-family: aston;
+            src: url(extras/aston_script/Aston\ Script.ttf);
+        }
+
+        nav {
+            font-family: aston;
+        }
+
+        .cart {
+            width: 50px;
+            height: 50px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        #divider {
+            width: 250px;
+            height: 50px;
+            align-self: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-position: inside; /* bullet points are in line with text and contained within the flex box */
+            gap: 20px;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .photos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 438px;
+            gap: 10px;
+        }
+
+        #greenland , #nyc , #glacier , #wf {
+            width: 438px;
+            height: 438px;
+            object-fit: cover; /* allows the image to be fixed inside the container without disrupting its dimensions */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .para {
+            text-align: center;
+            color: rgb(213, 65, 191);
+            background-color: #faf4f4;
+            width: 438px;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box; /* padding dimensions are included in the width and height of the paragraph divider */
+            overflow: hidden;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>>
+</head>
+<body>
+    <div id="main"> <!-- main container of the webpage -->
+        <img id="divider" src="extras/waves.gif">
+
+        <img class="cart" src="extras/mp3.gif" id="player"> <!-- shopping cart anchor -->
+
+        <nav>
+            <ul>
+                <li><a href="home.com">Home</a></li>  <!-- unordered list of anchors -->
+                <li><a href="blog.com">Blog</a></li>
+                <li><a href="aboutme.com">About Me</a></li>
+            </ul>
+        </nav>
+        
+        <div id="gallery"> <!-- divider of pictures and their descriptions -->
+            <div class="photos"> <!-- divider of one photo and its description -->
+                <img id="greenland" src="extras/cat.jpg">
+                <audio id="burrr" loop src="extras/burr.mp3"></audio>
+                <div class="para">
+                    <p>In geometry, a golden spiral is a logarithmic spiral whose growth factor is φ, the golden ratio. That is, a golden spiral gets wider (or further from its origin) by a factor of φ for every quarter turn it makes.</p>
+                </div>
+                <button type="button" onclick="alert('Approximate and true golden spirals: the green spiral is made from quarter-circles tangent to the interior of each square, while the red spiral is a golden spiral, a special type of logarithmic spiral. Overlapping portions appear yellow. The length of the side of a larger square to the next smaller square is in the golden ratio. For a square with side length 1, the next smaller square is 1/φ wide. The next width is 1/φ², then 1/φ³, and so on.')">Explore</button>
+            </div>
+
+            <div class="photos">
+                <img id="nyc" src="extras/duck.jpg">
+                <div class="para">
+                    <p>There are several comparable spirals that approximate, but do not exactly equal, a golden spiral.</p>
+                </div>
+                <button type="button" onclick="alert('Approximate and true golden spirals: the green spiral is made from quarter-circles tangent to the interior of each square, while the red spiral is a golden spiral, a special type of logarithmic spiral. Overlapping portions appear yellow. The length of the side of a larger square to the next smaller square is in the golden ratio. For a square with side length 1, the next smaller square is 1/φ wide. The next width is 1/φ², then 1/φ³, and so on.')">Explore</button>
+            </div>
+
+            <div class="photos">
+                <img id="glacier" src="extras/scorpion.jpg">
+                <div class="para">
+                <p>It is sometimes erroneously stated that spiral galaxies and nautilus shells get wider in the pattern of a golden spiral, and hence are related to both φ and the Fibonacci series.</p>
+                </div>
+                <button type="button" onclick="alert('Approximate and true golden spirals: the green spiral is made from quarter-circles tangent to the interior of each square, while the red spiral is a golden spiral, a special type of logarithmic spiral. Overlapping portions appear yellow. The length of the side of a larger square to the next smaller square is in the golden ratio. For a square with side length 1, the next smaller square is 1/φ wide. The next width is 1/φ², then 1/φ³, and so on.')">Explore</button>
+            </div>
+
+            <div class="photos">
+                <img id="wf" src="extras/parrot.jpg">
+                <div class="para">
+                <p>In truth, many mollusk shells including nautilus shells exhibit logarithmic spiral growth, but at a variety of angles usually distinctly different from that of the golden spiral.</p>
+                </div>
+                <button type="button" onclick="alert('Approximate and true golden spirals: the green spiral is made from quarter-circles tangent to the interior of each square, while the red spiral is a golden spiral, a special type of logarithmic spiral. Overlapping portions appear yellow. The length of the side of a larger square to the next smaller square is in the golden ratio. For a square with side length 1, the next smaller square is 1/φ wide. The next width is 1/φ², then 1/φ³, and so on.')">Explore</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; wikipedia.org</p>
+        </footer>
+    </div>
+
+        <script>
+            const audio = document.getElementById("burrr"); //the id burrr is found and stored as a variable called audio
+            const img = document.getElementById("player"); //the id player is found and stored as a variable called img
+            
+            img.onclick = function(){ //when the image is clicked, run this function
+                audio.play().catch(function(error){ //the audio plays, and if an error occurs, the .catch handles the error so the browser does not crash the script
+                    console.log("Audio failed to play:" , error); //prints a message inside the developer console if an error occurs, aka the audio fails to play
+                });
+            };
+        </script>
+</body>
+</html>
